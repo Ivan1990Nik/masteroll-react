@@ -1,0 +1,117 @@
+/* Контейнер слайда */
+.slide-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 40px;
+    transition: transform 0.3s ease;
+}
+
+.slide-content:hover {
+    transform: scale(1.03);
+}
+
+/* Тёмный overlay с золотым акцентом */
+.slide-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+ 
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Изображение слайда */
+.slide-image {
+    width: 100%;
+    height: 410px;
+    display: block;
+    margin-top: 10px;
+    border-radius: 40px;
+    transition: filter 0.3s ease;
+}
+
+.slide-content:hover .slide-image {
+    filter: sepia(0.2) brightness(0.9);
+}
+
+/* Унифицированный стиль текста для всех элементов */
+.slide-text {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: #ffd700;
+    font-weight: bold;
+    background: rgba(0,0,0,0.7);
+    text-align: left;
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-size: 16px; /* Одинаковый размер для всех */
+    max-width: 70%;
+    word-wrap: break-word;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    border: 2px solid #ffd700;
+    z-index: 2;
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease-in;
+}
+
+.slide-text:hover {
+    box-shadow: 0 0 20px #ffd700;
+}
+
+/* Рейтинг как золотая плашка в правом нижнем углу */
+.text-small {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    max-width: 120px;
+    word-wrap: break-word;
+    background: rgba(0,0,0,0.9);
+    color: #ffd700;
+    border: 3px solid #ffd700;
+    text-shadow: 1px 1px 3px rgba(0,0,0,1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    animation: fadeIn 1.2s ease-in;
+    z-index: 3;
+}
+
+.text-small:hover {
+    box-shadow: 0 0 25px #ffd700;
+    transform: scale(1.1);
+}
+
+/* Анимация fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+    .slide-text {
+        font-size: 14px;
+        padding: 10px 15px;
+        background: rgba(0,0,0,0.8);
+        max-width: 60%;
+    }
+    .text-small {
+        bottom: 10px;
+        right: 10px;
+        font-size: 12px;
+        max-width: 100px;
+        background: rgba(0,0,0,1);
+    }
+    .slide-image {
+        height: 180px;
+    }
+}
