@@ -2,7 +2,7 @@
   "name": "masteroll-react",
   "private": true,
   "version": "1.0.0",
-   "homepage": "https://github.com/Ivan1990Nik/masteroll-react.git",
+  "homepage": "https://Ivan1990Nik.github.io/masteroll-react",
   "type": "module",
   "scripts": {
     "dev": "vite",
