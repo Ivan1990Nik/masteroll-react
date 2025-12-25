@@ -7,6 +7,7 @@ import { FaBars } from "react-icons/fa"; // Для бургера
 import { FaTimes } from "react-icons/fa"; // Добавлено для кнопки закрыть
 import './header.css';
 import { useState } from 'react'; // Для состояния меню
+import logo from "../../assets/icon/logo.png"
 
 const Header = () => {
     
@@ -18,7 +19,7 @@ const Header = () => {
             <div className='header__header'>
                 <div className="header__top">
                     <div className="header__logo">
-                        <img src="/images/icon/logo.png" width="100px" alt="" />
+                        <img src={logo} width="100px" alt="" />
                     </div>
                     {/* Добавлен бургер для мобильных */}
                     <div className="header__menu">

@@ -1,37 +1,41 @@
+import slide1 from "../../assets/carousel/heppi.png";  // Первая картинка
+import slide2 from "../../assets/carousel/logot.png";  // Первая картинка
+import slide3 from "../../assets/carousel/procent10.png";  // Первая картинка
+import slide4 from "../../assets/carousel/stars.png";  // Первая картинка
+
+
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css'; // Базовый CSS Swiper
+import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-// Импортируй свой CSS-файл (если он называется carousel.css)
-import './carousel.css'; // Добавь это, если ещё не импортировано
+import './carousel.css';
 
 const Carousel = () => {
-    // Обновленный массив: убрали textStyle, добавили textClass для CSS-классов
     const images = [
         { 
-            src: '/images/carousel/heppi.png', 
+            src: slide1,  // Используй импортированную переменную!
             alt: 'Пицца Маргарита', 
             text: 'Вкусная Маргарита — классика!', 
-            textClass: 'text-large'  // Класс для стилизации в CSS
+            textClass: 'text-large'
         },
         { 
-            src: '/images/carousel/logot.png', 
+            src: slide2,  // Вторая картинка
             alt: 'Пицца Пепперони', 
-            text: '',  // Пустой текст
+            text: '', 
             textClass: '' 
         },
         { 
-            src: '/images/carousel/procent10.png', 
+            src: slide3,  // Третья картинка
             alt: 'Тирамису', 
             text: 'Скидка 10% на десерты!', 
             textClass: 'text-medium' 
         },
         { 
-            src: '/images/carousel/stars.png', 
+            src: slide4,  // Четвертая (или другая)
             alt: 'Тирамису', 
-            text: 'Бесплатная доставка при заказе от 500р (районы нужно уточнять) ', 
+            text: 'Бесплатная доставка при заказе от 500р (районы нужно уточнять)', 
             textClass: 'text-small' 
         },
     ];
@@ -44,21 +48,20 @@ const Carousel = () => {
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
-              /*   autoplay={{ delay: 3000, disableOnInteraction: false }} */
                 loop={true}
                 className="my-swiper"
             >
                 {images.map((image, index) => (
                     <SwiperSlide key={index}>
-                        <div className="slide-content"> {/* Контейнер для изображения и текста */}
+                        <div className="slide-content">
                             <img 
-                                src={image.src} 
+                                src={image.src}  // Теперь используем image.src (импортированную переменную)
                                 alt={image.alt} 
                                 className="slide-image" 
-                                loading="lazy"  // Для производительности
+                                loading="lazy"
                             />
-                            {image.text && (  // Рендерим текст только если он есть
-                                <div className={`slide-text ${image.textClass}`}>  {/* Используем классы из textClass */}
+                            {image.text && (
+                                <div className={`slide-text ${image.textClass}`}>
                                     {image.text}
                                 </div>
                             )}

@@ -17,7 +17,6 @@ function App() {
                 <Header />
                 <Routes>
                 <Route path="/" element={<Menu />} />
-          
                 <Route path="/cart" element={<CartPage />} />
             </Routes>
             </Router>

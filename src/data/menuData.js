@@ -1,3 +1,5 @@
+
+
 // Данные для роллов, пицц и сетов
 export const rolls = [
   {
@@ -5,8 +7,8 @@ export const rolls = [
     name: 'Калифорния ролл',
     description: 'Креветка, авокадо, рис.',
     weight: '200г',
-    price: 350,
-    img: '/images/IMG_5454-Photoroom.png',  // Путь к картинке в public/images
+    price: 450,
+    img: '/',  // Путь к картинке в public/images
 
   },
   {
