@@ -5,23 +5,17 @@ import Menu from './components/menu/Menu.jsx';
 import CartPage from './pages/CartPage.jsx';
 import Header from './components/header/header.jsx';
 
-
-
-
 function App() {
     return (
-     
-
-        <CartProvider >
-            <Router>
+        <CartProvider>
+            <Router /* basename="/masteroll-react" */> 
                 <Header />
                 <Routes>
-                <Route path="/" element={<Menu />} />
-                <Route path="/cart" element={<CartPage />} />
-            </Routes>
+                    <Route path="/" element={<Menu />} />
+                    <Route path="/cart" element={<CartPage />} />
+                </Routes>
             </Router>
         </CartProvider>
-    
     );
 }
 

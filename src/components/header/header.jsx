@@ -34,8 +34,8 @@ const Header = () => {
                             <FaTimes className="close-btn" onClick={() => setIsMenuOpen(false)} />
                             {/* Пункты меню — добавлены onClick для закрытия меню */}
                             <div className="header__item" onClick={() => setIsMenuOpen(false)}>РОЛЛЫ</div>
-                            <div className="header__item" onClick={() => setIsMenuOpen(false)}>ПИЦЦА</div>
                             <div className="header__item" onClick={() => setIsMenuOpen(false)}>СЕТЫ</div>
+                            <div className="header__item" onClick={() => setIsMenuOpen(false)}>ЗАКУСКА</div>
                             {/* Элементы из header__users, адаптированные для меню */}
                             <a href="#contact" className="header__item" onClick={() => setIsMenuOpen(false)}>
                                 <LuContactRound className='cart-icon' />
@@ -57,7 +57,7 @@ const Header = () => {
                         {isMenuOpen && <div className="overlay open" onClick={() => setIsMenuOpen(false)}></div>}
                         {/* Десктопные пункты */}
                         <div className="header__item desktop-only">РОЛЛЫ</div>
-                        <div className="header__item desktop-only">ПИЦЦА</div>
+                        <div className="header__item desktop-only">ЗАКУСКА</div>
                         <div className="header__item desktop-only">СЕТЫ</div>
                     </div>
                     {/* header__users для десктопа */}

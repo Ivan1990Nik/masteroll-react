@@ -20,11 +20,11 @@ export const CartProvider = ({ children }) => {
     const addToCart = (item) => {
         setCart(prev => {
             // Ищем по id И size (чтобы разные размеры были отдельными позициями)
-            const existing = prev.find(cartItem => cartItem.id === item.id && cartItem.size === item.size);
+            const existing = prev.find(cartItem => cartItem.id === item.id );
             if (existing) {
                 // Увеличиваем количество для существующего (того же id и size)
                 return prev.map(cartItem =>
-                    cartItem.id === item.id && cartItem.size === item.size
+                    cartItem.id === item.id 
                         ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
                         : cartItem
                 );
@@ -36,9 +36,26 @@ export const CartProvider = ({ children }) => {
     };
 
     // Обновлённая функция: удаление товара по id И size (удаляет только конкретную позицию)
-    const removeFromCart = (id, size) => {
-        setCart(prev => prev.filter(item => !(item.id === id && item.size === size)));
+    const removeFromCart = (id, ) => {
+        setCart(prev => prev.filter(item => !(item.id === id )));
     };
+    const updateQuantity = (id, delta) => {
+        setCart(prev =>
+            prev.map(item => {
+                    if (item.id === id ) {
+                        const newQuantity = item.quantity + delta;
+
+                        // если стало 0 или меньше — удаляем товар
+                        if (newQuantity < 1) return item;
+
+                        return { ...item, quantity: newQuantity };
+                    }
+                    return item;
+                })
+                
+        );
+    };
+
 
     // Новая функция: очистка корзины (для использования после отправки заказа)
     const clearCart = () => {
@@ -57,7 +74,16 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, handleOrder }}>
+        <CartContext.Provider
+            value={{
+                cart,
+                addToCart,
+                removeFromCart,
+                updateQuantity,
+                clearCart,
+                handleOrder
+            }}
+        >
             {children}
         </CartContext.Provider>
     );

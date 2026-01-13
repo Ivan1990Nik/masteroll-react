@@ -44,9 +44,34 @@
 
 .cart-item-quantity,
 .cart-item-price {
+    display: flex;
+    align-items: center;
     font-size: 0.9em;
     color: #666;
 }
+
+.cart-item-quantity span{
+text-align: center;
+width: 20px;
+}
+
+.cart-item-icriment-uantity {
+    margin: 0 10px;
+        width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: gold;
+    color: #000000;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+
 
 .remove-btn {
     background-color: #ff4d4d;
@@ -163,6 +188,68 @@
     margin-top: 20px;
     color: green;
 }
+.switch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+/* контейнер */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+}
+
+/* скрываем стандартный input */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* ползунок */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.3s;
+}
+
+/* круг */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* включено */
+.switch input:checked + .slider {
+  background-color: #ff9800;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+/* disabled кнопка */
+.submit-order-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 
 /* Адаптивность для мобильных (<768px) */
 @media (max-width: 767px) {
@@ -195,6 +282,13 @@
         padding: 15px;
         
     }
+
+
+
+
+
+
+
 }
 
 
