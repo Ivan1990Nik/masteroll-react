@@ -408,7 +408,7 @@ export const sets = [
   {
     id: 100,
     pieces: 8,
-    name: 'Сет для двоих',
+    name: 'Хит',
     description: 'Роллы и пицца.',
     weight: '800',
     price: 700,
@@ -417,7 +417,7 @@ export const sets = [
   {
     id: 101,
     pieces: 8,
-    name: 'Сет для двоих',
+    name: 'Япония',
     description: 'Роллы и пицца.',
     weight: '800',
     price: 700,
@@ -426,7 +426,7 @@ export const sets = [
   {
     id: 102,
     pieces: 8,
-    name: 'Сет для двоих',
+    name: 'Запеченный',
     description: 'Роллы и пицца.',
     weight: '800',
     price: 700,
@@ -435,7 +435,7 @@ export const sets = [
   {
     id: 103,
     pieces: 8,
-    name: 'Сет для двоих',
+    name: 'Запеченный 2',
     description: 'Роллы и пицца.',
     weight: '800',
     price: 700,
@@ -444,7 +444,7 @@ export const sets = [
   {
     id: 104,
     pieces: 8,
-    name: 'Сет для двоих',
+    name: 'Классический',
     description: 'Роллы и пицца.',
     weight: '800',
     price: 700,
@@ -453,7 +453,7 @@ export const sets = [
   {
     id: 105,
     pieces: 8,
-    name: 'Сет для двоих',
+    name: 'Токио',
     description: 'Роллы и пицца.',
     weight: '800',
     price: 700,
@@ -462,7 +462,7 @@ export const sets = [
   {
     id: 106,
     pieces: 8,
-    name: 'Сет для двоих',
+    name: 'Премиум',
     description: 'Роллы и пицца.',
     weight: '800',
     price: 700,
@@ -471,7 +471,7 @@ export const sets = [
   {
     id: 107,
     pieces: 8,
-    name: 'Сет для двоих',
+    name: 'Биг Хот',
     description: 'Роллы и пицца.',
     weight: '800',
     price: 700,
@@ -480,7 +480,7 @@ export const sets = [
   {
     id: 108,
     pieces: 8,
-    name: 'Сет для двоих',
+    name: 'Пекин',
     description: 'Роллы и пицца.',
     weight: '800',
     price: 700,
@@ -489,7 +489,7 @@ export const sets = [
   {
     id: 109,
     pieces: 8,
-    name: 'Сет для двоих',
+    name: 'Ёку',
     description: 'Роллы и пицца.',
     weight: '800',
     price: 700,
@@ -498,7 +498,7 @@ export const sets = [
   {
     id: 110,
     pieces: 8,
-    name: 'Сет для двоих',
+    name: 'Якудза',
     description: 'Роллы и пицца.',
     weight: '800',
     price: 700,
@@ -507,7 +507,7 @@ export const sets = [
   {
     id: 111,
     pieces: 8,
-    name: 'Сет для двоих',
+    name: 'Пати',
     description: 'Роллы и пицца.',
     weight: '800',
     price: 700,
@@ -516,21 +516,13 @@ export const sets = [
   {
     id: 112,
     pieces: 8,
-    name: 'Сет для двоих',
+    name: 'Мега',
     description: 'Роллы и пицца.',
     weight: '800',
     price: 700,
     img: getImage("IMG_5301-Photoroom.png"),
   },
-  {
-    id: 113,
-    pieces: 8,
-    name: 'Сет для двоих',
-    description: 'Роллы и пицца.',
-    weight: '800',
-    price: 700,
-    img: getImage("IMG_5301-Photoroom.png"),
-  },
+  
 
 ];
 
